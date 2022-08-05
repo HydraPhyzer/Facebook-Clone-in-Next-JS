@@ -6,6 +6,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+        <link rel="shortcut icon" href="Facebook.webp" type="image/x-icon" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet" />
       </Head>
 
