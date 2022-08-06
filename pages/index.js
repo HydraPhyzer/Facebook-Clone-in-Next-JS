@@ -4,6 +4,7 @@ import Login from '../Components/Login'
 import Head from 'next/head'
 import Sidebar from '../Components/Sidebar'
 import RightSidebar from '../Components/RightSidebar'
+import Fed from '../Components/Fed'
 
 export default function Home({session}) {
   if(!session)
@@ -17,9 +18,16 @@ export default function Home({session}) {
       </Head>
       <Header />
 
-      <div className="Body flex justify-between">
-        <Sidebar/>
-        <RightSidebar/>
+      <div className="Body grid grid-cols-12">
+        <div className='col-span-2 md:col-span-3 lg:col-span-2'>
+          <Sidebar/>
+        </div>
+        <div className='col-span-8 md:col-span-6 lg:col-span-8'>
+          <Fed/>
+        </div>
+        <div className='col-span-2 md:col-span-3 lg:col-span-2'>
+          <RightSidebar/>
+        </div>
       </div>
     </>
   )

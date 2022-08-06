@@ -13,8 +13,8 @@ const Header = () => {
           <div className="Left flex items-center space-x-1 bg-white">
             <Image
               src="/Facebook.webp"
-              height={30}
-              width={30}
+              height={25}
+              width={25}
               objectFit="cover"
               className='bg-white'
             />
@@ -36,12 +36,12 @@ const Header = () => {
           <div onClick={()=>{signOut()}} className="Right flex items-center space-x-2 bg-white cursor-pointer">
           <Image
               src={`${data?.user.image}`}
-              height={30}
-              width={30}
+              height={25}
+              width={25}
               objectFit="cover"
               className='rounded-full '
             />
-            <p className='font-bold text-gray-500 bg-white text-sm'>{data?.user.name}</p>
+            <p className='font-bold text-gray-500 bg-white text-xs'>{data?.user.name}</p>
           </div>
       </div>
     </>

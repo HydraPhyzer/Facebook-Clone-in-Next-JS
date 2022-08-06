@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 const Sidebar = () => {
     let {data}=useSession();
   return (
-    <div className="space-y-5 sm:space-y-10 p-4 mb-5 text-gray-500 w-fit border-l-2 border-white h-[100vh] overflow-scroll scrollbar-hide">
+    <div className="space-y-5 sm:space-y-10 p-4 mb-5 text-gray-500 ml-1 border-l-2 border-white h-[100vh] overflow-scroll scrollbar-hide">
       <SidebarIcon User="Elno Musk" Img={`/Famous/Elon.jpg`} />
       <SidebarIcon User="Harry" Img={`/Famous/Harry.webp`} />
       <SidebarIcon User="Jeff Bezos" Img={`/Famous/Jeff.jpg`} />

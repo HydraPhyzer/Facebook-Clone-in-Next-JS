@@ -13,8 +13,8 @@ import { useSession } from "next-auth/react";
 const Sidebar = () => {
     let {data}=useSession();
   return (
-    <div className="space-y-5 sm:space-y-10 p-4 mb-5 text-gray-500 w-fit border-r-2 border-white h-[100vh] overflow-hidden">
-      <SidebarIcon User={`${data.user?.name}`} Img={`${data.user.image}`} />
+    <div className="sm:block w-fit flex flex-col items-center space-y-5 sm:space-y-10 p-4 mb-5 text-gray-500 border-r-2 border-white h-[100vh]">
+      <SidebarIcon User={`${data?.user?.name}`} Img={`${data?.user.image}`} />
       <SidebarIcon Title="Home" Icon={HomeIcon} />
       <SidebarIcon Title="Friends" Icon={FlagIcon} />
       <SidebarIcon Title="Watch" Icon={PlayIcon} />

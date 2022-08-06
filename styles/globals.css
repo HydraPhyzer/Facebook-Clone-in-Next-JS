@@ -10,5 +10,16 @@
   box-sizing: border-box;
   font-family: 'Poppins';
   background-color: #F0F2F5;
-  overflow: hidden;
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar
+{
+  border-radius: 5px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: #3B82F6;
+  border-radius: 5px;
 }
