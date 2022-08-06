@@ -2,8 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import {SearchIcon, HomeIcon,FlagIcon,PlayIcon,ShoppingCartIcon,UserGroupIcon} from '@heroicons/react/outline'
 import HeaderIcon from './HeaderIcon'
+import { useSession,signOut } from 'next-auth/react'
 
 const Header = () => {
+  let {data}=useSession();
+  
   return (
     <>
       <div className="Header flex justify-between items-center p-2 bg-white shadow-lg">
@@ -30,15 +33,15 @@ const Header = () => {
               <HeaderIcon Icon={UserGroupIcon}/>
           </div>
 
-          <div className="Right flex items-center space-x-2 bg-white">
+          <div onClick={()=>{signOut()}} className="Right flex items-center space-x-2 bg-white cursor-pointer">
           <Image
-              src="/Famous/Elon.jpg"
+              src={`${data?.user.image}`}
               height={30}
               width={30}
               objectFit="cover"
               className='rounded-full '
             />
-            <p className='font-bold text-gray-500 bg-white'>Zubair</p>
+            <p className='font-bold text-gray-500 bg-white text-sm'>{data?.user.name}</p>
           </div>
       </div>
     </>
