@@ -12,7 +12,7 @@ export default function Home({session}) {
     return <Login/>
   }
   return (
-    <>
+    <div className='Index'>
       <Head>
         <title>Facebook Clone</title>
       </Head>
@@ -29,7 +29,7 @@ export default function Home({session}) {
           <RightSidebar/>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

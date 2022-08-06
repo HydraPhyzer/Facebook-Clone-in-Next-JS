@@ -3,13 +3,13 @@ import Image from "next/image";
 const Story = ({ Img, User }) => {
   return (
     <>
-      <div className="mr-1  sm:h-[200px] sm:w-[120px] w-[50px] relative">
+      <div className="rounded-lg mr-1  sm:h-[200px] sm:w-[120px] w-[50px] relative overflow-hidden ">
         <Image
           src={Img}
           height={200}
           width={120}
           objectFit="cover"
-          className="rounded-lg"/>
+          className="rounded-lg hover:scale-105 transition-all"/>
 
           <div className="top-[3px] left-[3px] z-100 absolute rounded-full p-[1px] flex bg-[#3B82F6]">
           <Image
