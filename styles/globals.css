@@ -10,4 +10,5 @@
   box-sizing: border-box;
   font-family: 'Poppins';
   background-color: #F0F2F5;
+  overflow: hidden;
 }
