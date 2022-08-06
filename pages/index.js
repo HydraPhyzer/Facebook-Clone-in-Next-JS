@@ -3,6 +3,7 @@ import { useSession, signOut,getSession } from "next-auth/react"
 import Login from '../Components/Login'
 import Head from 'next/head'
 import Sidebar from '../Components/Sidebar'
+import RightSidebar from '../Components/RightSidebar'
 
 export default function Home({session}) {
   if(!session)
@@ -16,8 +17,9 @@ export default function Home({session}) {
       </Head>
       <Header />
 
-      <div className="Body">
+      <div className="Body flex justify-between">
         <Sidebar/>
+        <RightSidebar/>
       </div>
     </>
   )

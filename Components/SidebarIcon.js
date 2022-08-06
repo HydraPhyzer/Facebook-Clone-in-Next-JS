@@ -18,7 +18,7 @@ const SidebarIcon = ({ Icon, Title, User, Img }) => {
               height={40}
               width={40}
               className="flex rounded-full"
-              objectFit="fill"
+              objectFit="cover"
             />
           </div>
         )}
