@@ -15,15 +15,15 @@
 {
   background-color: #F0F2F5;
 }
-.Story
+.Story,.Feed
 {
-  overflow: scroll;
+  overflow: scroll;  
 }
 
 ::-webkit-scrollbar
 {
   border-radius: 5px;
-  height: 7px;
+  height: 5px;
 }
 ::-webkit-scrollbar-thumb
 {
