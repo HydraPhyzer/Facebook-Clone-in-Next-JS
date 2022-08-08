@@ -3,7 +3,7 @@ import AddPost from "./AddPost";
 import DisplayPost from "./DisplayPost";
 import Story from "./Story";
 
-const Fed = () => {
+const Fed = ({Data}) => {
   return (
     <div className="sm:max-w-[50vw] mx-auto flex flex-col space-y-5">
       <div className="rounded-lg Story ">
@@ -22,7 +22,7 @@ const Fed = () => {
 
       <div className=" mx-auto sm:w-[70%] w-[100%]">
         <AddPost />
-        <DisplayPost/>
+        <DisplayPost Data={Data}/>
       </div>
     </div>
   );

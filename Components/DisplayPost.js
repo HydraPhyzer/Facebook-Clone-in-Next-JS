@@ -1,23 +1,19 @@
+import { useSession } from 'next-auth/react'
 import React from 'react'
-import { collection, getDocs } from "firebase/firestore";
-import { db } from '../Firebase';
+import EachPost from './EachPost'
 
 
-const DisplayPost = () => {
-
-
-    let As;
-
-    let Ola=async()=>
-    {
-        let A=await getDocs(collection(db, "Posts"))
-        return A
-    }
-    let AA=Ola();
-
+const DisplayPost = ({Data}) => {
     return (
         <div>
-            DisplayPost
+            {
+                Data.map((Elem,ind)=>
+                {
+                    return(
+                        <EachPost Info={Elem.Data} key={ind}/>
+                    )
+                })
+            }
         </div>
 
   )

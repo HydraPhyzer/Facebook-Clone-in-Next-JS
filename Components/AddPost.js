@@ -43,8 +43,8 @@ const AddPost = () => {
           let { id } = AllPosts;
           const storageRef = ref(storage, "Images");
           const spaceRef = ref(storageRef, id);
-
-          uploadString(spaceRef,File).then((snapshot) => {
+          console.log(File)
+          uploadString(spaceRef,File,"data_url").then((snapshot) => {
             getDownloadURL(snapshot.ref).then(async (downloadURL) => {
               let Rf = doc(db, "Posts", id);
               setDoc(Rf, { Image: downloadURL }, { merge: true });
@@ -54,9 +54,11 @@ const AddPost = () => {
       });
     }
     Picker.current.value = "";
+    setFile("")
+    setType("")
   };
   return (
-    <div className="flex flex-col bg-white p-2 rounded-xl space-y-3">
+    <div className="flex flex-col bg-white p-2 rounded-md space-y-3">
       <div className="Top text-xs flex items-center bg-white space-x-2">
         <img
           src={`${data?.user?.image}`}
